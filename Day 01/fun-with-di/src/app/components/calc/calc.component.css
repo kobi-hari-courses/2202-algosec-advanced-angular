@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2px;
+}
+
+.container * {
+    margin-right: 5px;
+}
+
+.sub-title {
+    font-weight: bold;
+}
