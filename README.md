@@ -16,3 +16,5 @@
 * Custom structural directives and the **Microsyntax**
 * And possibly more...
 
+## Daily summaries
+* [Day 01 - Dependency Injection, Modules and Routing](Day%2001/README.md)
