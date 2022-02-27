@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PREFIX_TOKEN } from 'src/app/constants/injection-tokens';
 import { AdditionService } from 'src/app/services/addition.service';
 
 @Component({
@@ -7,6 +8,10 @@ import { AdditionService } from 'src/app/services/addition.service';
   styleUrls: ['./group.component.css'], 
   providers: [
     // AdditionService
+    {
+      provide: PREFIX_TOKEN, 
+      useValue: '@@@@@@'
+    },
     {
       provide: AdditionService, 
       useClass: AdditionService
