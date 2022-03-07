@@ -18,3 +18,4 @@
 
 ## Daily summaries
 * [Day 01 - Dependency Injection, Modules and Routing](Day%2001/README.md)
+* [Day 02 - Promises and RxJS](Day%2002/README.md)

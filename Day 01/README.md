@@ -1,4 +1,4 @@
-## Day 03 - Services, Dependency Injection and RxJS
+## Day 01 - Dependency Injection Modules in Angular and Routing
 ### Projects:
 |     |     |
 | --- | --- |
