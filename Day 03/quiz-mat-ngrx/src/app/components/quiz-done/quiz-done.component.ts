@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
+import { AppSelectors } from 'src/app/redux/app.types';
 
 @Component({
   selector: 'app-quiz-done',
@@ -7,11 +9,12 @@ import { Observable, of } from 'rxjs';
   styleUrls: ['./quiz-done.component.scss']
 })
 export class QuizDoneComponent implements OnInit {
-  score$: Observable<number> = of(0.7);
+  score$!: Observable<number>;
 
-  constructor() { }
+  constructor(private store: Store<any>) { }
 
   ngOnInit(): void {
+    this.score$ = this.store.select(AppSelectors.score);
   }
 
 }
