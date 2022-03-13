@@ -1,1 +1,7 @@
-<p>quiz-done works!</p>
+<mat-card>
+    <mat-card-content>
+        <mat-icon>check_circle_outline</mat-icon>
+        <h1>Quiz Done</h1>
+        <h2>Your score is {{score$ | async | percent}}</h2>
+    </mat-card-content>
+</mat-card>

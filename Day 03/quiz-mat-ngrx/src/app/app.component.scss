@@ -1,31 +1,22 @@
 :host {
-    --reka: lightgreen;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
 
-}
-button {
-    margin: 10px;
-}
+    mat-toolbar {
+        mat-toolbar-row {
+            justify-content: center;
 
+            mat-icon {
+                font-size: 32px;
+                margin: 8px;
+            }            
+        }    
+    }
 
-h1 {
-    background: var(--p-100);
-    color: var(--p-700);
-}
-
-
-.my-icon {
-    font-size: 40px;
-    padding: 12px;
-    background-color: var(--p-500);
-    border-radius: 50%;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-    border: 3px solid var(--a-700);
-    transform: rotate(0deg);
-    transition: 0.5s;
+    mat-card {
+        margin: 4px;
+    }
 }
 
-.my-icon:hover {
-    transform: rotate(90deg);
 
-}
- 
+

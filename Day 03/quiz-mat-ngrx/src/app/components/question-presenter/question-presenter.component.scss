@@ -1,0 +1,41 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    mat-card {
+        min-width: 400px;
+        padding: 0px;
+        margin-top: 20px;
+        overflow: hidden;
+
+        mat-card-title {
+            background-color: var(--p-700);
+            color: var(--pc-700);
+            padding: 8px;
+        }
+
+        mat-card-content {
+            .item-content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .index {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 24px;
+                    height: 24px;
+                    background-color: var(--a-100);
+                    color: var(--ac-100);
+                    border-radius: 50%;
+                }
+
+                .answer {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}

@@ -1,1 +1,11 @@
-<p>progress works!</p>
+<ng-container *ngFor="let item of data$ | async; let index = index; let last = last">
+    <span class="step" [class.future]="item === 'Future'">
+        <mat-icon *ngIf="item === 'Correct'">done</mat-icon>
+        <mat-icon *ngIf="item === 'Wrong'">clear</mat-icon>
+        <ng-container *ngIf="item === 'Future'">
+            {{index + 1}}
+        </ng-container>
+    </span>
+    <span class="seperator" *ngIf="!last"></span>
+</ng-container>
+

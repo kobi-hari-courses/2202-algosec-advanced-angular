@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-quiz-done',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quiz-done.component.scss']
 })
 export class QuizDoneComponent implements OnInit {
+  score$: Observable<number> = of(0.7);
 
   constructor() { }
 

@@ -1,15 +1,14 @@
-<h1>Hello World</h1>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <mat-icon>palette</mat-icon>
+        <span>Colors Quiz</span>
+    </mat-toolbar-row>
+</mat-toolbar>
 
-Welcome to out material design application
+<mat-card>
+    <mat-card-content>
+        <app-progress></app-progress>
+    </mat-card-content>
+</mat-card>
 
-<div>
-    <button mat-raised-button color="primary">Primary</button>
-    <button mat-raised-button color="accent">Accent</button>
-    <button mat-raised-button color="warn">Warn</button>       
-</div>
-
-<div>
-    <mat-icon color="primary">home</mat-icon>
-    <mat-icon color="accent">alarm_add</mat-icon>
-    <mat-icon class="my-icon">camera_enhance</mat-icon>
-</div>
+<router-outlet></router-outlet>

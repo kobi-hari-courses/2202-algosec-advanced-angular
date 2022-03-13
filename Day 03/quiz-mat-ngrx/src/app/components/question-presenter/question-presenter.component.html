@@ -1,1 +1,13 @@
-<p>question-presenter works!</p>
+<mat-card *ngIf="currentQuestion$ | async as currentQuestion">
+    <mat-card-title>{{currentQuestion.caption}}</mat-card-title>
+    <mat-card-content>
+        <mat-action-list>
+            <mat-list-item *ngFor="let answer of currentQuestion.answers; let index = index">
+                <div class="item-content">
+                    <span class="index">{{index + 1}}</span>
+                    <span class="answer">{{answer}}</span>
+                </div>
+            </mat-list-item>
+        </mat-action-list>
+    </mat-card-content>
+</mat-card>

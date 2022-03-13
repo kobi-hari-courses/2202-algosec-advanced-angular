@@ -14,6 +14,7 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif; 
   background-color: var(--b-background);
   color: var(--f-text);
+  display: grid;
 }
 
 * {
