@@ -4,7 +4,7 @@ $plt-primary: mat.define-palette(mat.$green-palette);
 $plt-accent: mat.define-palette(mat.$orange-palette, A200, A100, A400);
 $plt-warn: mat.define-palette(mat.$red-palette);
 
-$theme: mat.define-dark-theme((
+$theme: mat.define-light-theme((
   color: (
     primary: $plt-primary,
     accent: $plt-accent,
