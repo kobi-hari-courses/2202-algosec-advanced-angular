@@ -6,6 +6,18 @@
 <h1>The selected value of app-root = {{selectedValue}}</h1>
 <button (click)="changeSelectedValue()">Change to red</button> -->
 
+<h1>Hello World</h1>
+<h2 appHighlight="magenta">What we are going to learn about directives:</h2>
+<ul>
+    <li>What are directives</li>
+    <li [appHighlight]="selectedValue">How to access the low level DOM using a directive</li>
+    <li>Why not to do it the way I demonstrated in the previous bullet</li>
+    <li>How to do it better</li>
+    <li appHighlight="pink">How to do it even better</li>
+</ul>
+
+<app-stam appHighlight="teal">Bla Bla Bla</app-stam>
+
 <app-expander #myExpander>
     <button appExpanderToggle>
         {{myExpander.isOpen ? 'close' : 'open'}}
