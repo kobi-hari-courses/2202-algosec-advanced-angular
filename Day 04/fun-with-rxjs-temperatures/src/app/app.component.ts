@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'fun-with-rxjs-temperatures';
+  constructor(private dataService: DataService){}
+  
+  toggles: boolean[] = [false, false, false, false];
+
+  toggle(index: number) {
+    this.toggles[index] = !this.toggles[index];
+  }
 }

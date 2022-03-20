@@ -2,13 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { DataPresenterComponent } from './components/data-presenter/data-presenter.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DataPresenterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
