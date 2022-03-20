@@ -1,0 +1,12 @@
+<div class="search-area">
+  <input #searchBox type="search" (input)="search$.next(searchBox.value)">
+  <img *ngIf="isBusy$ | async" 
+    src="https://thumbs.gfycat.com/ConventionalOblongFairybluebird-max-1mb.gif">
+</div>
+
+<div class="results-area">
+  <div class="result-item" *ngFor="let clr of results$ | async" 
+       [style.background]="clr.hex">
+    {{clr.name}}
+  </div>
+</div>

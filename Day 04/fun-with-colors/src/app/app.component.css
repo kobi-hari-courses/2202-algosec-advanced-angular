@@ -1,0 +1,15 @@
+.search-area {
+    display: flex;
+    flex-direction: row;
+    height: 2rem;    
+}
+
+img {
+    margin: 4px;
+}
+
+.result-item {
+    padding: 4px;
+    border-radius: 4px;
+    margin: 4px;
+}
