@@ -1,0 +1,18 @@
+<!-- <app-selector [options]="colors" [selectedValue]="selectedValue"
+    (onSelection)="selectedValue = $event"
+>
+</app-selector>
+
+<h1>The selected value of app-root = {{selectedValue}}</h1>
+<button (click)="changeSelectedValue()">Change to red</button> -->
+
+<app-expander #myExpander>
+    <button appExpanderToggle>
+        {{myExpander.isOpen ? 'close' : 'open'}}
+    </button>
+    <h3 expander-header>here are some things to buy</h3>
+    <app-selector [options]="colors" 
+    [selectedValue]="selectedValue"
+    (onSelection)="selectedValue = $event"
+    ></app-selector>
+</app-expander>

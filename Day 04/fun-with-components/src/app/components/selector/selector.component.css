@@ -1,0 +1,16 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin: 4px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+div.chosen {
+    background-color: lightgreen;
+}
