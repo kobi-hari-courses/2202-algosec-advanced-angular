@@ -1,0 +1,7 @@
+<div 
+    *ngFor="let item of possibleOptions"
+    [class.chosen]="item === selectedValue"
+    (click)="onChooseValue(item)"
+    >
+  {{ item }}
+</div>

@@ -1,0 +1,71 @@
+<!-- <app-selector [options]="colors" [selectedValue]="selectedValue"
+    (onSelection)="selectedValue = $event"
+>
+</app-selector>
+
+<h1>The selected value of app-root = {{selectedValue}}</h1>
+<button (click)="changeSelectedValue()">Change to red</button> -->
+
+<table>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>10</td>
+    <td>11</td>
+    <td>12</td>
+  </tr>
+</table>
+
+
+<h1 class="x">Hello World</h1>
+<h2 appHighlight="magenta">What we are going to learn about directives:</h2>
+<ul kobi>
+  <li class="x kobi">What are directives</li>
+  <li [appHighlight]="selectedValue">
+    How to access the low level DOM using a directive
+  </li>
+  <li>Why not to do it the way I demonstrated in the previous bullet</li>
+  <li class="x">How to do it better</li>
+  <li appHighlight="pink">How to do it even better</li>
+</ul>
+
+<h3 class="kobi">This is a header</h3>
+
+<kobi>bla bla bla</kobi>
+
+<h2>This is a bigger header</h2>
+
+<app-stam appHighlight="teal">Bla Bla Bla</app-stam>
+
+<app-expander #myExpander>
+  <button appExpanderToggle>
+    {{ myExpander.isOpen ? "close" : "open" }}
+  </button>
+  <h3 disabled expander-header>here are some things to buy</h3>
+  <app-selector
+    [options]="colors"
+    [selectedValue]="selectedValue"
+    (onSelection)="selectedValue = $event"
+  ></app-selector>
+</app-expander>
+
+<input type="text" />
+<hr />
+<input type="number" disabled xyz />
+<hr />
+<input type="checkbox" xyz/>
+<hr />
+<input type="date" disabled/>
+<hr />
+

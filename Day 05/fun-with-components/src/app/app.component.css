@@ -1,0 +1,19 @@
+li {
+    color: blue;
+}
+
+.x {
+    text-decoration: red underline;
+}
+
+[disabled] {
+    border: 1px solid magenta;
+}
+
+[xyz] {
+    box-shadow: 4px 4px 4px yellow;
+}
+
+input[type=text] {
+    transform: rotate(15deg);
+}

@@ -1,0 +1,9 @@
+<div class="caption">
+    <ng-content select="[expander-header]"></ng-content>
+</div>
+<div class="tools">
+    <ng-content select="button"></ng-content>
+</div>
+<div class="body" *ngIf="isOpen">
+    <ng-content></ng-content>
+</div>
