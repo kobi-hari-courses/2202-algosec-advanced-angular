@@ -1,0 +1,17 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    border: 1px solid gray;
+    margin: 4px;
+    padding: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+div.selected {
+    background-color: rgb(187, 241, 187);
+
+}

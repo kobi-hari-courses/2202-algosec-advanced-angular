@@ -1,16 +1,52 @@
 <h1>Hello World</h1>
 
-<ng-template #myTemplate>
-  <h1>Hi World</h1>
-  <h2>How are you?</h2>
+<div class="selectors">
+  <app-string-selector
+    [options]="colors"
+    [selectedOption]="selectedColor"
+    (optionSelected)="selectedColor = $event"
+  >
+    <span *optionTemplate="let color" [style.color]="color">{{ color }}</span>
+  </app-string-selector>
+
+  <app-string-selector
+    [options]="fonts"
+    [selectedOption]="selectedFont"
+    (optionSelected)="selectedFont = $event"
+  >
+    <span *optionTemplate="let fontName" [style.font-family]="fontName">
+      {{fontName}}
+    </span>
+  </app-string-selector>
+
+  <app-string-selector
+    [options]="sizes"
+    [selectedOption]="selectedSize"
+    (optionSelected)="selectedSize = $event"
+  ></app-string-selector>
+</div>
+
+<ng-template #myTemplate let-clr="headerColor" let-under="headerUnderline">
+  <h1 [style.color]="clr" [style.text-decoration]="'underline ' + under">
+    Hi World
+  </h1>
+  <h2>How are you? {{ clr }}, {{ under }}</h2>
 </ng-template>
 
 <div class="instance-container">
-  <ng-container *ngTemplateOutlet="myTemplate">
-  </ng-container>  
+  <ng-container
+    *ngTemplateOutlet="
+      myTemplate;
+      context: { headerColor: 'red', headerUnderline: 'orange' }
+    "
+  >
+  </ng-container>
 </div>
 
-
-<ng-container *ngTemplateOutlet="myTemplate">
-
+<ng-container
+  *ngTemplateOutlet="
+    myTemplate;
+    context: { headerColor: 'green', headerUnderline: 'magenta' }
+  "
+>
 </ng-container>
