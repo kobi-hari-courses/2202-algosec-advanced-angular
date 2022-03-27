@@ -6,6 +6,10 @@ import { DemoDirective } from './directives/demo.directive';
 import { StringSelectorComponent } from './components/string-selector/string-selector.component';
 import { ItemTemplateDirective } from './components/string-selector/item-template.directive';
 import { MessageComponent } from './components/message/message.component';
+import { ExpanderComponent } from './components/expander/expander.component';
+import { BlankDirective } from './directives/blank.directive';
+import { IfDirective } from './directives/if.directive';
+import { RepeaterDirective } from './directives/repeater.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +17,11 @@ import { MessageComponent } from './components/message/message.component';
     DemoDirective,
     StringSelectorComponent,
     ItemTemplateDirective,
-    MessageComponent
+    MessageComponent,
+    ExpanderComponent,
+    BlankDirective,
+    IfDirective,
+    RepeaterDirective
   ],
   imports: [
     BrowserModule

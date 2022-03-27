@@ -14,4 +14,21 @@ export class AppComponent {
   selectedSize = this.sizes[2];
   selectedFont = this.fonts[0];
 
+  condition: boolean = true;
+  counter = 5;
+
+
+  toggle() {
+    this.condition = !this.condition;
+  }
+
+  inc() {
+    this.counter ++;    
+  }
+
+  dec() {
+    this.counter--;
+  }
+
+
 }

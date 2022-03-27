@@ -1,6 +1,39 @@
-<ng-template appDemo>
+<button (click)="inc()">+</button>
+{{counter}}
+<button (click)="dec()">-</button>
+
+<ng-template [myRepeat]="3"  let-index
+    [myRepeatStartWith]="10" [myRepeatSkip]="2">
+  <span>Hello {{index}}</span>
+</ng-template>
+
+<span *myRepeat="3 startWith 10 skip 2 let index">Hello {{index}}</span>
+
+
+
+<!-- <button (click)="toggle()">Toggle Condition</button>
+
+<h1 *ngIf="condition">This is the title</h1>
+
+<ng-template [ngIf]="condition">
+  <h1>This is the title</h1>
+</ng-template>
+
+<h1 *myIf="condition">This is the title</h1>
+
+<ng-template [ngIf]="condition">
+  <h1>This is the title</h1>
+</ng-template> -->
+
+
+<!-- <ng-template appDemo>
   <span>Bla bla bla</span>
 </ng-template>
+
+<app-expander>
+  <h1>Main title</h1>
+  <h2>Sub title</h2>
+</app-expander>
 
 
 
@@ -54,4 +87,4 @@
     context: { headerColor: 'green', headerUnderline: 'magenta' }
   "
 >
-</ng-container>
+</ng-container> -->
