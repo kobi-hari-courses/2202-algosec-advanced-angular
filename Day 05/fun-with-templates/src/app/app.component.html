@@ -1,15 +1,32 @@
-<button (click)="inc()">+</button>
-{{counter}}
-<button (click)="dec()">-</button>
+<button (click)="counter=counter + 1">+</button>
+{{ counter }}
+<button (click)="counter=counter - 1">-</button>
 
-<ng-template [myRepeat]="3"  let-index
-    [myRepeatStartWith]="10" [myRepeatSkip]="2">
-  <span>Hello {{index}}</span>
-</ng-template>
+<button (click)="skip=skip + 1">+</button>
+{{ skip }}
+<button (click)="skip=skip - 1">-</button>
 
-<span *myRepeat="3 startWith 10 skip 2 let index">Hello {{index}}</span>
+<button (click)="start=start + 1">+</button>
+{{ start }}
+<button (click)="start=start - 1">-</button>
 
+<div class="container">
+  <ng-template
+    [myRepeat]="counter"
+    let-index
+    let-isFirst="first"
+    let-isLast="last"
+    [myRepeatStartWith]="start"
+    [myRepeatSkip]="skip"
+  >
+    <span>Hello {{ index }} {{isFirst ? 'First' : ''}}{{this.isLast ? 'last': ''}}</span>
+  </ng-template>
+</div>
 
+<div class="container">
+  <span *myRepeat="counter; startWith: start; skip: skip; let index; let isFirst=first; let isLast=last"
+  >Hello {{ index }} {{isFirst ? 'First' : ''}}{{this.isLast ? 'last': ''}}</span>
+</div>
 
 <!-- <button (click)="toggle()">Toggle Condition</button>
 
@@ -24,7 +41,6 @@
 <ng-template [ngIf]="condition">
   <h1>This is the title</h1>
 </ng-template> -->
-
 
 <!-- <ng-template appDemo>
   <span>Bla bla bla</span>

@@ -17,17 +17,13 @@ export class AppComponent {
   condition: boolean = true;
   counter = 5;
 
+  skip = 1;
+
+  start = 1;
+
 
   toggle() {
     this.condition = !this.condition;
-  }
-
-  inc() {
-    this.counter ++;    
-  }
-
-  dec() {
-    this.counter--;
   }
 
 
