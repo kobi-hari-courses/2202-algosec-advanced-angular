@@ -21,3 +21,4 @@
 * [Day 02 - Promises and RxJS](Day%2002/README.md)
 * [Day 03 - ScSS, Material and NgRX](Day%2003/README.md)
 * [Day 04 - RxJS Operators, Directive Deep Dive](Day%2004/README.md)
+* [Day 05 - Views, Templates and Structural Directives](Day%2005/README.md)
