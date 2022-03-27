@@ -1,11 +1,16 @@
-<h1>Hello World</h1>
+<ng-template appDemo>
+  <span>Bla bla bla</span>
+</ng-template>
+
+
 
 <div class="selectors">
   <app-string-selector
     [options]="colors"
     [selectedOption]="selectedColor"
     (optionSelected)="selectedColor = $event"
-  >
+    >
+    <h1></h1>
     <span *optionTemplate="let color" [style.color]="color">{{ color }}</span>
   </app-string-selector>
 
